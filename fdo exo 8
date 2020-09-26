@@ -1,0 +1,16 @@
+exercice 8
+
+1) Desassemblage
+
+0800	LDX #$00	;X<-00
+0802	STX $0D		;0D<-X
+0804	LDA $10,x	;A<-10+X
+0806	CMP $0E		;A-0E
+0808 	BEQ $06 cond1	;si A-$0E=06 on va sur l'instruction BRK au cas contraire on fait celle du bas
+080A 	INX		;x<-x+1
+080B	CPX $0E		;x-$0E
+080D	BNE $F5 cond2 	;x-$0E !=$F5 on ne fait rien si non on fait l'instruction du bas 
+080F cond1 BRK
+0810	INC $0D	;0D<-0D+1
+0812 	BRK
+ 

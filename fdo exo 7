@@ -1,0 +1,16 @@
+exercice 7
+
+1) Desassemblage
+
+0100	LDX $B0		;x<-B0	
+0102	CMP #$15	;X-15
+0104 	BPL $04 FSI	;si x-15 >$04 on vas sur BRK au cas ontraire on continue
+0106	LDY #$01	;Y<-01
+0108	STY $81		;$81<-y c'est a dire 01	
+010A FSI BRK		;fin de l'instruction
+
+2) arrivé à l'adresse 0102 le flag N est executé dans le registre P et a l'adresse
+0104 si x-15<0 alors N=1 alors on saute dans le registre p qui nous enmene sur BRK
+au cas contraire N=1 et on execute le code juste en bas	
+
+

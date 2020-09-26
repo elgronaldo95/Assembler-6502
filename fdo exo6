@@ -1,0 +1,27 @@
+
+exercice 6
+
+2)cas général avec n>0
+*=$100
+
+NB=$4E
+TVAL=$20
+
+	LDX #$01
+	LDA *TVAL
+	STA *$4A
+POUR	LDA *TVAL,X
+	CMP *$4A
+	BMI PROG
+	STA *$4A
+PROG	INX
+	CPX *NB
+	BNE POUR
+	BRK
+
+A2 01 A5 20 85 4A B5 20
+C5 4A 30 02 85 4A E8 E4
+4E D0 F3 00
+		
+
+
