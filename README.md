@@ -1,2 +1,2 @@
 # Assembler-6502
-quelque exercice en langage Assembler
+quelques exercices en langage Assembler 6502
